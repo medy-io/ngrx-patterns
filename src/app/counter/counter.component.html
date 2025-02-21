@@ -1,0 +1,10 @@
+<div>
+    <!-- <button (click)="increment()">Increment</button> -->
+    @for (count of countList; track $index) {
+        <div>Current Count: {{ count.name }}</div>
+    } @empty {
+        <div>There are no counters.</div>
+    }
+    <!-- <button (click)="decrement()">Decrement</button>
+    <button (click)="reset()">Reset Counter</button> -->
+</div>
