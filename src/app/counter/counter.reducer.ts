@@ -1,4 +1,4 @@
-import { createReducer, on, props } from '@ngrx/store';
+import { createReducer, on } from '@ngrx/store';
 import { getCountersLoad, getCountersSuccess } from './counter.actions';
 import { Counter } from './counter.service';
 

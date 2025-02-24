@@ -1,10 +1,11 @@
-<div>
-    <!-- <button (click)="increment()">Increment</button> -->
+<div class="wrapper">
     @for (count of countList; track $index) {
-        <div>Current Count: {{ count.name }}</div>
+        <section class="card">
+            <h2>Name: {{ count.name }}</h2>
+            <h4>Type: {{ count.type }}</h4>
+            <div>Count: {{ count.count }}</div>
+        </section>
     } @empty {
-        <div>There are no counters.</div>
+        <div class="empty">There are no counters...</div>
     }
-    <!-- <button (click)="decrement()">Decrement</button>
-    <button (click)="reset()">Reset Counter</button> -->
 </div>

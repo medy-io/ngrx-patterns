@@ -11,6 +11,7 @@ import { selectFeatureCount } from './counter.selector';
   providers: [Store],
   standalone: true,
   templateUrl: './counter.component.html',
+  styleUrl: './counter.component.scss'
 })
 export class MyCounterComponent {
   store: Store<any> = inject(Store);
@@ -19,8 +20,8 @@ export class MyCounterComponent {
 
   constructor() {
     this.store.select(selectFeatureCount).subscribe((c) => {
-      if (c && c.counterList && c.counterList.length > 0) {
-        this.countList = c.counterList;
+      if (c && c.length > 0) {
+        this.countList = c;
       }
     });
     this.store.dispatch(getCountersLoad({ loadingStatus: 'LOADING' }));
